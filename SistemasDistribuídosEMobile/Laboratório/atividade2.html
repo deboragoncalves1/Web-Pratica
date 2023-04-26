@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prática 02</title>
+    <a href="index.html">Página Principal</a>
+
+
+    <h1> Questão 1, Processe o troco em uma máquina</h1>
+
+    <h1>Questão 2 (IMC) </h1>
+    <label for="peso">Peso (kg):</label>
+    <input type="number" id="peso" name="peso"><br><br>
+    <label for="altura">Altura (m):</label>
+    <input type="number" id="altura" name="altura"><br><br>
+    <button onclick="calcularIMC()">Calcular IMC</button><br><br>
+    <div id="resultado"></div>
+    <script>
+      function calcularIMC() {
+        // Obter os valores de peso e altura do usuário
+        var peso = parseFloat(document.getElementById("peso").value);
+        var altura = parseFloat(document.getElementById("altura").value);
+        
+        // Calcular o IMC
+        var imc = peso / (altura * altura);
+        
+        // Exibir o resultado
+        var resultado = document.getElementById("resultado");
+        resultado.innerHTML = "Seu IMC é: " + imc.toFixed(2) + "<br>";
+        
+        // Classificar o IMC com base na tabela de referência
+        if (imc < 20) {
+          resultado.innerHTML += "abaixo do peso.";
+        } else if (imc < 25) {
+          resultado.innerHTML += "Normal.";
+        } else if (imc < 30) {
+          resultado.innerHTML += "sobrepeso.";
+        } else if (imc < 30) {
+            resultado.innerHTML += "sobrepeso.";
+        } else if (imc < 35) {
+            resultado.innerHTML += "Obesidade grau I.";
+        } else if (imc < 40) {
+            resultado.innerHTML += "Obesidade grau II.";
+        } else if (imc > 40) {
+            resultado.innerHTML += "Obesidade grau III.";
+        }
+      }
+    </script>
+
+    <H1>3) Retorne o valor da função abaixo após receber um valor qualquer de entrada: </H1>
+
+    <h1> 4) Informe o preço dos produtos de uma loja, conforme indicado na tabela abaixo. O
+        algoritmo deve receber o código do produto como entrada.</h1>
+
+        <label for="codigo">Digite o código do produto:</label>
+        <input type="text" id="codigo" name="codigo">
+        <button type="button" onclick="verificarPreco()">Verificar Preço</button>
+      </form>
+      <div id="preco"></div>
+  
+      <script>
+        function verificarPreco() {
+          const codigo = document.getElementById("codigo").value;
+          let preco;
+  
+          switch (codigo) {
+            case "1":
+              preco = 99.99;
+              break;
+            case "2":
+              preco = 103.89;
+              break;
+            case "3":
+              preco = 49.98;
+              break;
+            case "4":
+              preco = 89.72;
+              break;
+            case "5":
+              preco = 97.35;
+              break;
+            default:
+              preco = "Código de produto inválido";
+          }
+  
+          document.getElementById("preco").innerHTML = `Preço: R$ ${preco}`;
+        }
+      </script>
+
+
+</body>
+</html>
+
+  </body>
+</html>

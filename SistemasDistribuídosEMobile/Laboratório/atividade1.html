@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Calculando a idade através do ano de Nascimeto</title>
+</head>
+
+<body>
+      <a href="index.html">Página Principal</a>
+
+  <a href="index.html">Página Principal</a>
+  <h1> 1) Receba o ano de nascimento de uma pessoa, o ano atual e imprima:</h1>
+  <label for="anoDoNascimento">Em que ano você nasceu?</label>
+  <input type="number" id="anoDoNascimento">
+
+  <label for="anoDoNascimento">Digite o ano atual:</label>
+  <input type="number" id="anoaAtual">
+
+  <script>
+    var idade = anoDoNascimento - anoAtual
+  </script>
+  <button onclick="calcularIdade()">Calcular</button>
+  <p id="resultado"></p>
+
+  <script>
+    function calcularIdade() {
+      const anoAtual = new Date().getFullYear();
+      const anoDoNascimento = document.getElementById("anoDoNascimento").value;
+      const idade = anoAtual - anoDoNascimento;
+      document.getElementById("resultado").textContent = "Oiee, a sua idade é " + idade + " anos.✨";
+
+    }
+  </script>
+
+  <h1> 2) Receba o salário de um funcionário, calcule e mostre o novo salário com aumento de
+    25%.</h1>
+
+  <label for="salarioAntigo">Informe seu salário antigo:</label>
+  <input type="number" id="salarioAntigo">
+  <button onclick="calcularSalario()">Calcular</button>
+  <p id="novoSalario"></p>
+  <script>
+    function calcularSalario() {
+      const salarioAntigo = document.getElementById("salarioAntigo").value;
+      const novoSalario = salarioAntigo * 1.25;
+      document.getElementById("novoSalario").textContent = "Seu novo salário é " + novoSalario.toFixed(2);
+    }
+  </script>
+
+  <h1> 3) Receba uma temperatura em Celsius, calcule e mostre essa temperatura em Fahrenheit.
+    OBS: F = (C * 1,8) + 32.</h1>
+  <label for="temp_celsius">Temperatura em Celsius:</label>
+  <input type="number" id="temp_celsius">
+  <button onclick="converterTemperatura()">Converter</button>
+
+  <p id="temp_fahrenheit"></p>
+
+  <script>
+    function converterTemperatura() {
+      // Obtém o valor da temperatura em Celsius a partir do input
+      const tempCelsius = document.getElementById("temp_celsius").value;
+
+      // Converte a temperatura para Fahrenheit usando a fórmula F = (C * 1,8) + 32
+      const tempFahrenheit = (tempCelsius * 1.8) + 32;
+      // Atualiza o texto do elemento <p> com a temperatura em Fahrenheit
+      document.getElementById("temp_fahrenheit").textContent = `Temperatura em Fahrenheit: ${tempFahrenheit}°F`;
+    }
+  </script>
+
+
+  <h1> 4) Receba três notas, calcule e apresente a média aritmética das notas informadas.</h1>
+
+  <label for="nota1">Digite a primeira nota</label>
+  <input type="number" id="nota1">
+
+  <label for="nota2">Digite a segunda nota</label>
+  <input type="number" id="nota2">
+
+  <label for="nota2">Digite a terceira nota</label>
+  <input type="number" id="nota3">
+
+  <script>
+    var media = nota1 + nota2 + nota3 / 3
+  </script>
+
+  <button onclick="calcularMedia()">Calcular</button>
+  <p id="media"></p>
+
+
+  <script>
+    const nota1 = document.getElementById("nota1").value
+    const nota2 = document.getElementById("nota2").value
+    const nota3 = document.getElementById("nota3").value
+    document.getElementById("media").textContent = "Sua média é:" + media;
+
+
+  </script>
+
+  <h1> </h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Hipotenusa</title>
+</head>
+<body>
+
+  <h1> 5) Receba os valores dos dois catetos de um triângulo, calcule e apresente o valor da
+    hipotenusa. OBS - Teorema de Pitágoras: a
+    2 = b2 + c2</h1>
+    
+  <label for="catetoA">Cateto A:</label>
+  <input type="number" id="catetoA"><br><br>
+
+  <label for="catetoB">Cateto B:</label>
+  <input type="number" id="catetoB"><br><br>
+
+  <button onclick="calcularHipotenusa()">Calcular</button><br><br>
+
+  <label for="hipotenusa">Hipotenusa:</label>
+  <input type="number" id="hipotenusa" readonly>
+
+  <script>
+    function calcularHipotenusa() {
+      var catetoA = parseFloat(document.getElementById("catetoA").value);
+      var catetoB = parseFloat(document.getElementById("catetoB").value);
+
+      var hipotenusa = Math.sqrt(Math.pow(catetoA, 2) + Math.pow(catetoB, 2));
+
+      document.getElementById("hipotenusa").value = hipotenusa;
+    }
+  </script>
+
+  <h1> 6) Receba o raio, calcule e apresente:
+
+    a. O comprimento de uma esfera: C = 2 * π * R.
+    b. A área de uma esfera: A = π * R2
+    c. O volume de uma esfera: V = 3⁄4 * π * R3 - Não consegui entender a lógica usada para fazer o calculo
+    
+      </body>
+    </html>
+    
+
+</body>
+
+</html>
